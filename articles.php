@@ -15,8 +15,11 @@ $loader = new Twig_Loader_Filesystem('templates');
 // Initialize Twig
 $twig = new Twig_Environment($loader);
 
+// You can move all the previous code to its own file and
+// whenever you need to use Twig, just include it
+
 // Now we have our Twig environment ready
-// Lets render some templates!
+// Let's render some templates!
 
 // An array with data to pass to the template
 $data = array(
@@ -25,5 +28,5 @@ $data = array(
     'city' => 'Azenha de Baixo'
 );
 
-// Call the render method with the name of the template and data array
+// Finally we call the render method with the name of the template and data array
 echo $twig->render('articles.twig.html', $data);
